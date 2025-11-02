@@ -10,28 +10,28 @@
   <div class="container">
     <h2 class="mb-4">會員註冊</h2>
     <form id="signup-form" novalidate>
-      <!-- 姓名 -->
+
       <div class="mb-3">
         <label class="form-label" for="name">姓名</label>
         <input id="name" name="name" type="text" class="form-control" required aria-describedby="name-error">
         <p id="name-error" class="text-danger small mb-0" aria-live="polite"></p>
       </div>
 
-      <!-- Email -->
+
       <div class="mb-3">
         <label class="form-label" for="email">Email</label>
         <input id="email" name="email" type="email" class="form-control" required aria-describedby="email-error">
         <p id="email-error" class="text-danger small mb-0" aria-live="polite"></p>
       </div>
 
-      <!-- 手機 -->
+
       <div class="mb-3">
         <label class="form-label" for="phone">手機</label>
         <input id="phone" name="phone" type="tel" class="form-control" pattern="^09\d{8}$" required aria-describedby="phone-error">
         <p id="phone-error" class="text-danger small mb-0" aria-live="polite"></p>
       </div>
 
-      <!-- 密碼 -->
+
       <div class="mb-3">
         <label class="form-label" for="password">密碼</label>
         <input id="password" name="password" type="password" class="form-control" minlength="8" required aria-describedby="password-error password-strength">
@@ -39,14 +39,14 @@
         <div id="password-strength" class="form-text">密碼強度：<span id="strength-text">尚未輸入</span></div>
       </div>
 
-      <!-- 確認密碼 -->
+
       <div class="mb-3">
         <label class="form-label" for="confirm">確認密碼</label>
         <input id="confirm" name="confirm" type="password" class="form-control" required aria-describedby="confirm-error">
         <p id="confirm-error" class="text-danger small mb-0" aria-live="polite"></p>
       </div>
 
-      <!-- 興趣標籤 -->
+
       <div class="mb-3">
         <label class="form-label">興趣標籤（至少勾選 1 個）</label>
         <div id="interests" class="d-flex gap-2 flex-wrap" aria-describedby="interests-error">
@@ -66,14 +66,14 @@
         <p id="interests-error" class="text-danger small mb-0" aria-live="polite"></p>
       </div>
 
-      <!-- 服務條款 -->
+
       <div class="form-check mb-3">
         <input id="agree" class="form-check-input" type="checkbox" required aria-describedby="agree-error">
         <label class="form-check-label" for="agree">我已閱讀並同意服務條款</label>
         <p id="agree-error" class="text-danger small mb-0" aria-live="polite"></p>
       </div>
 
-      <!-- 按鈕 -->
+
       <div class="d-flex gap-2">
         <button id="submit-btn" class="btn btn-primary" type="submit">送出</button>
         <button id="reset-btn" class="btn btn-outline-secondary" type="button">重設</button>

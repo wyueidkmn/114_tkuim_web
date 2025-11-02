@@ -2,7 +2,7 @@ const form = document.getElementById('signup-form');
 const submitBtn = document.getElementById('submit-btn');
 const resetBtn = document.getElementById('reset-btn');
 
-// 欄位
+
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const phoneInput = document.getElementById('phone');
@@ -11,7 +11,7 @@ const confirmInput = document.getElementById('confirm');
 const interestsDiv = document.getElementById('interests');
 const agreeCheckbox = document.getElementById('agree');
 
-// 錯誤訊息
+
 const errors = {
   name: document.getElementById('name-error'),
   email: document.getElementById('email-error'),
@@ -23,10 +23,10 @@ const errors = {
   strengthText: document.getElementById('strength-text')
 };
 
-// localStorage Key
+
 const STORAGE_KEY = 'signup_form_data';
 
-// ==== 工具函式 ====
+
 function setError(input, message) {
   input.setCustomValidity(message);
   errors[input.id] && (errors[input.id].textContent = message);
@@ -90,7 +90,7 @@ function validateAgree() {
   return agreeCheckbox.checked;
 }
 
-// 密碼強度
+
 function updateStrength(value) {
   let strength = '弱';
   let className = 'weak';
@@ -107,7 +107,7 @@ function updateStrength(value) {
   errors.strengthText.className = className;
 }
 
-// 保存到 localStorage
+
 function saveForm() {
   const data = {
     name: nameInput.value,
@@ -123,7 +123,7 @@ function saveForm() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
-// 載入 localStorage
+
 function loadForm() {
   const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
   if (data.name) nameInput.value = data.name;
@@ -140,7 +140,7 @@ function loadForm() {
   updateStrength(passwordInput.value);
 }
 
-// ==== 事件綁定 ====
+
 [nameInput, emailInput, phoneInput, passwordInput, confirmInput].forEach(input => {
   input.addEventListener('blur', () => {
     switch(input.id) {
@@ -165,7 +165,7 @@ function loadForm() {
   });
 });
 
-// 興趣標籤事件委派
+
 interestsDiv.addEventListener('change', (event) => {
   if (event.target.matches('input[type="checkbox"]')) {
     validateInterests();
@@ -173,13 +173,13 @@ interestsDiv.addEventListener('change', (event) => {
   }
 });
 
-// 服務條款
+
 agreeCheckbox.addEventListener('change', () => {
   validateAgree();
   saveForm();
 });
 
-// 送出事件
+
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
@@ -225,7 +225,7 @@ form.addEventListener('submit', async (event) => {
   submitBtn.textContent = '送出';
 });
 
-// 重設
+
 resetBtn.addEventListener('click', () => {
   form.reset();
   errors.strengthText.textContent = '尚未輸入';
@@ -235,5 +235,5 @@ resetBtn.addEventListener('click', () => {
   localStorage.removeItem(STORAGE_KEY);
 });
 
-// 載入 localStorage
+
 loadForm();
