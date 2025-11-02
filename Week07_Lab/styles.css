@@ -1,0 +1,59 @@
+/* styles.css */
+
+/* 密碼強度文字 */
+#strength-text {
+  font-weight: bold;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+#strength-text.weak {
+  color: #dc3545; /* 紅色 */
+}
+
+#strength-text.medium {
+  color: #fd7e14; /* 橙色 */
+}
+
+#strength-text.strong {
+  color: #198754; /* 綠色 */
+}
+
+/* 興趣標籤勾選樣式 */
+.interest-label {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.interest-label input[type="checkbox"] {
+  display: none; /* 隱藏 checkbox */
+}
+
+.interest-label.checked {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+/* 錯誤訊息文字 */
+.text-danger {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* 調整欄位間距 */
+.form-control, .form-check {
+  margin-bottom: 0.5rem;
+}
+
+/* 送出中按鈕樣式 */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
