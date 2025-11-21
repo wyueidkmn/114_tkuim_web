@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "05e2eee8-e69a-42ec-b6fb-c76f7e71925a",
+		"name": "Week09 Signup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50237587",
+		"_collection_link": "https://wetrosewet66-1905291.postman.co/workspace/%E5%BB%BA's-Workspace~318df247-855e-4613-8303-b0c3b84c2484/collection/50237587-05e2eee8-e69a-42ec-b6fb-c76f7e71925a?action=share&source=collection_link&creator=50237587"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
