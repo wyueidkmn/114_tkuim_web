@@ -1,20 +1,32 @@
-### 建立報名
+@id = 123
+
 POST http://localhost:3001/api/signup
 Content-Type: application/json
 
 {
-  "name": "新同學",
-  "email": "new@example.com",
-  "phone": "0911222333"
+  "name": "student1",
+  "email": "demo1@example.com",
+  "phone": "0911111111"
 }
 
-### 取得清單
-GET http://localhost:3001/api/signup
-
-### 更新
-PATCH http://localhost:3001/api/signup/{{last_id}}
+POST http://localhost:3001/api/signup
 Content-Type: application/json
 
 {
-  "phone": "0911000111"
+  "name": "student2",
+  "email": "demo1@example.com",
+  "phone": "0922222222"
 }
+
+
+GET http://localhost:3001/api/signup?page=1&limit=2
+
+
+PATCH http://localhost:3001/api/signup/{{id}}
+Content-Type: application/json
+
+{
+  "phone": "0933333333"
+}
+
+DELETE http://localhost:3001/api/signup/{{id}}
