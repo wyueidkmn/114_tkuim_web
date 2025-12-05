@@ -8,15 +8,10 @@ Docker Desktop: 用於執行 MongoDB 資料庫
 
 ## 2. 環境變數設定 (.env)
 
-請在 `server/` 資料夾下建立 `.env` 檔案：
-
-| 變數名稱 | 說明 | 範例值 |
-| :--- | :--- | :--- |
-| `PORT` | 伺服器 Port | `3001` |
-| `MONGODB_URI` | MongoDB 連線字串 | `mongodb://user:pass@localhost:27017/db?authSource=admin` |
-| `ALLOWED_ORIGIN`| CORS 允許來源 | `http://localhost:5173` |
-
----
+在 `server/` 資料夾下建立 `.env` 檔案：
+PORT=3001
+MONGODB_URI=mongodb://week11-user:week11-pass@localhost:27017/week11?authSource=week11
+ALLOWED_ORIGIN=http://localhost:5173
 
 ## 3. Mongo Shell 測試指令範例
 
@@ -25,7 +20,7 @@ Docker Desktop: 用於執行 MongoDB 資料庫
 
 ## 4. 啟動指令
 
-步驟1:進入 docker 資料夾並啟動容器：
+步驟1:進入 docker 資料夾並啟動：
 docker-compose up -d mongodb
 步驟2:進入 server 資料夾:
 npm install
@@ -35,7 +30,7 @@ npm run dev
 ## 5. 測試方法
 
 使用 VS Code REST Client
-開啟 tests/api.http 檔案(測試腳本)
+開啟 tests/api.http 檔案
 
 ## 測試截圖
 
