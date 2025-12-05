@@ -39,4 +39,4 @@ npm run dev
 
 ## 測試截圖
 
-<img src="123.png" width="600" alt="API 測試結果">
+<img src="./png/123.png" width="600" alt="API 測試結果">
