@@ -17,6 +17,11 @@ export function getDB() {
   return db;
 }
 
+export function getCollection(name) {
+  if (!db) throw new Error("Database not initialized");
+  return db.collection(name);
+}
+
 process.on("SIGINT", async () => {
   await client.close();
   console.log("\n[DB] Connection closed");

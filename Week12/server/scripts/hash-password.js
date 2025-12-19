@@ -1,12 +1,8 @@
-import bcrypt from 'bcrypt';
+import bcrypt from "bcrypt";
 
+const password = "pass1234"; // admin 密碼
+const saltRounds = 10;
 
-const password = process.argv[2];
-if (!password) {
-console.log('Usage: node hash-password.js <password>');
-process.exit(1);
-}
-
-
-const hash = await bcrypt.hash(password, 10);
-console.log(hash);
+bcrypt.hash(password, saltRounds).then(hash => {
+  console.log("passwordHash:", hash);
+});
