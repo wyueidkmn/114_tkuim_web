@@ -1,4 +1,4 @@
-import { getCollection } from '../db.js';
+import { getDB } from '../db.js';
 import { ObjectId } from 'mongodb';
 
 
