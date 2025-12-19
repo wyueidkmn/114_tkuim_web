@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans,
+          Arial, "Microsoft JhengHei", sans-serif;
+        margin: 24px;
+      }
+      h1 {
+        margin-bottom: 8px;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        min-width: 220px;
+      }
+      button {
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 6px;
+        background: #2563eb;
+        color: #fff;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #6b7280;
+      }
+      button.danger {
+        background: #dc2626;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px dashed #eee;
+      }
+      .muted {
+        color: #6b7280;
+      }
+      .hide {
+        display: none;
+      }
+      .right {
+        text-align: right;
+      }
+      .error {
+        color: #dc2626;
+      }
+      .success {
+        color: #16a34a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form</h1>
+
+    <div id="authCard" class="card">
+      <h2>登入</h2>
+      <form id="loginForm" class="row">
+        <input id="loginEmail" type="email" placeholder="Email" required />
+        <input id="loginPassword" type="password" placeholder="密碼" required />
+        <button type="submit">登入</button>
+      </form>
+      <p id="loginMsg" class="muted"></p>
+    </div>
+
+    <div id="userCard" class="card hide">
+      <h2>目前使用者</h2>
+      <div id="currentUser">—</div>
+      <div class="right" style="margin-top: 8px">
+        <button id="logoutBtn" class="secondary">登出</button>
+      </div>
+    </div>
+
+    <div id="createCard" class="card hide">
+      <h2>新增報名資料</h2>
+      <form id="createForm" class="row">
+        <input id="name" placeholder="姓名" required />
+        <input id="email" type="email" placeholder="Email" required />
+        <input id="phone" placeholder="電話" required />
+        <button type="submit">送出</button>
+      </form>
+      <p id="createMsg" class="muted"></p>
+    </div>
+
+    <div id="listCard" class="card hide">
+      <h2>報名列表</h2>
+      <ul id="list"></ul>
+      <div class="row" style="margin-top: 8px">
+        <button id="prevBtn" class="secondary">上一頁</button>
+        <span id="pageInfo" class="muted"></span>
+        <button id="nextBtn" class="secondary">下一頁</button>
+      </div>
+      <p id="listMsg" class="muted"></p>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
