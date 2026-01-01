@@ -1,0 +1,3 @@
+node app.js
+db.users.find().pretty()
+use week12
