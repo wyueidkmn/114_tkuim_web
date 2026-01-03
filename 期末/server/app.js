@@ -5,16 +5,24 @@ import cors from "cors";
 import { connectDB } from "./db.js";
 import signupRouter from "./routes/signup.js";
 import authRouter from "./routes/auth.js";
+import menuRouter from "./routes/menu.js"; // Keeping old routes if needed
+import orderRouter from "./routes/orders.js";
+import restaurantRouter from "./routes/restaurants.js";
+import commentRouter from "./routes/comments.js";
 
 const app = express();
 
 // CORS 允許前端存取
-app.use(cors({ origin: process.env.ALLOWED_ORIGIN }));
+app.use(cors({ origin: process.env.ALLOWED_ORIGIN || '*' }));
 app.use(express.json());
 
 // 路由設定
 app.use("/auth", authRouter);
 app.use("/api/signup", signupRouter);
+app.use("/api/menu", menuRouter);
+app.use("/api/orders", orderRouter);
+app.use("/api/restaurants", restaurantRouter);
+app.use("/api/comments", commentRouter);
 
 // 404 Not Found
 app.use((req, res) => {
